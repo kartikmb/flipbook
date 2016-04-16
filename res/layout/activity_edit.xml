@@ -1,0 +1,205 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center" >
+
+        <LinearLayout style="@style/spacing" >
+
+            <Spinner
+                android:id="@+id/color_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/squiggle"
+                style="@style/tool_button"
+                android:src="@drawable/squiggle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/line"
+                style="@style/tool_button"
+                android:src="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/rect"
+                style="@style/tool_button"
+                android:src="@drawable/rect" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/oval"
+                style="@style/tool_button"
+                android:src="@drawable/oval" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/select"
+                style="@style/tool_button"
+                android:src="@drawable/select" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <edu.foothill.myflipbook.DrawCanvas
+        android:id="@+id/draw_canvas"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/transformation_row"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/move_up"
+                style="@style/transformation_button"
+                android:src="@drawable/move_up" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/move_down"
+                style="@style/transformation_button"
+                android:src="@drawable/move_down" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/move_left"
+                style="@style/transformation_button"
+                android:src="@drawable/move_left" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/move_right"
+                style="@style/transformation_button"
+                android:src="@drawable/move_right" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/rotate_cw"
+                style="@style/transformation_button"
+                android:src="@drawable/rotate_cw" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/rotate_ccw"
+                style="@style/transformation_button"
+                android:src="@drawable/rotate_ccw" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/zoom_in"
+                style="@style/transformation_button"
+                android:src="@drawable/zoom_in" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/zoom_out"
+                style="@style/transformation_button"
+                android:src="@drawable/zoom_out" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/spacing" >
+
+            <ImageView
+                android:id="@+id/remove_shape"
+                style="@style/transformation_button"
+                android:src="@drawable/remove_shape" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/page_row_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="37.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/add_page"
+                android:layout_width="match_parent"
+                android:layout_height="37.5dp"
+                android:layout_marginBottom="2.5dp"
+                android:background="@drawable/transformation_button"
+                android:onClick="addPage"
+                android:scaleType="centerInside"
+                android:src="@drawable/add_page" />
+
+            <ImageView
+                android:id="@+id/remove_page"
+                android:layout_width="match_parent"
+                android:layout_height="37.5dp"
+                android:layout_marginTop="2.5dp"
+                android:background="@drawable/transformation_button"
+                android:onClick="removePage"
+                android:scaleType="centerInside"
+                android:src="@drawable/remove_page" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/page_row"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

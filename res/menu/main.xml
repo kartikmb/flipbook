@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/add_flipbook"
+          android:icon="@drawable/add_flipbook"
+          android:title="@string/new_flipbook"
+          android:orderInCategory="1"
+          android:showAsAction="always" />
+
+</menu>

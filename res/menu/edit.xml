@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/save_page"
+        android:icon="@drawable/save"
+        android:showAsAction="always"
+        android:title="@string/save_page"/>
+    <item
+        android:id="@+id/download_flipbook"
+        android:icon="@drawable/download"
+        android:showAsAction="always"
+        android:title="@string/download_flipbook"/>
+    <item
+        android:id="@+id/delete_flipbook"
+        android:icon="@drawable/delete_flipbook"
+        android:showAsAction="always"
+        android:title="@string/delete_flipbook"/>
+    <item
+        android:id="@+id/play_flipbook"
+        android:icon="@drawable/play"
+        android:showAsAction="always"
+        android:title="@string/play_flipbook"/>
+
+</menu>
